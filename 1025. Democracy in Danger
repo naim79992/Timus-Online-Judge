@@ -1,0 +1,24 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+    int k,count;
+    while (scanf("%d", &k) != EOF ) {
+        int a [107],i;
+
+        for (i = 0; i < k; i++) scanf ("%d", &a [i]);
+
+        sort (a, a + k);
+        k++;
+        count = 0;
+
+        for (i = 1; i <= k / 2; i++) {
+            count += (a [i - 1] + 1) / 2;
+        }
+
+        printf ("%d\n",count);
+    }
+
+    return 0;
+}
